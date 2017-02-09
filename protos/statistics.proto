@@ -1,0 +1,21 @@
+option java_package = "cn.com.newbee.feng.Statistics.protointerface";
+ 
+option java_outer_classname = "MyStatisticsInterface";
+option java_generic_services = true;
+option optimize_for = SPEED;
+ 
+message getStatisticsRequest{
+ required string type = 1;
+ optional string famillyName = 2;
+ optional string columnName = 3;
+}
+ 
+message getStatisticsResponse {
+ optional int64 result = 1;
+}
+ 
+ 
+service myStatisticsService {
+ rpc getStatisticsResult(getStatisticsRequest)
+ returns(getStatisticsResponse);
+}
