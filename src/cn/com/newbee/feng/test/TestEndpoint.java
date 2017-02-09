@@ -170,6 +170,7 @@ public class TestEndpoint {
 							rpcCallback);
 					// 直接返回结果，即该 Region 的 rowCount
 					return rpcCallback.get();
+					
 				}
 			};
 			// 每一个region都加载了Endpoint协处理器，换句话说每一个region都能提供rpc的service服务，首先确定调用的范围
